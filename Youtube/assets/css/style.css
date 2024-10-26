@@ -5,32 +5,32 @@
 }
 
 body {
+  display: flex;
+  flex-direction: column;
   font-family: Arial, Helvetica, sans-serif;
   font-size: 14px;
+  height: 100%;
 }
 
 .hr {
   margin: 10px 0;
 }
 
-.principal {
-  display: flex;
-  flex-direction: column;
-  height: 100%;
-  padding: 10px;
-}
-
 .menu {
   display: flex;
-  flex-direction: row;
-  height: 70px;
+  flex-direction: column;
+  align-items: center;
+  position: fixed;
+  background: white;
+  width: 220px;
+  height: 100%;
+  z-index: 1;
 }
 
 .logo {
   display: flex;
   flex-direction: row;
   width: 200px;
-  height: 100%;
   align-items: center;
   justify-content: center;
 }
@@ -52,62 +52,23 @@ body {
   float: right;
 }
 
-.buscar {
+.section-main {
   display: flex;
-  width: 900px;
+  flex-direction: column;
+  width: 100%;
   height: 100%;
-  align-items: center;
-  justify-content: center;
-}
+  margin-top: 100px;
 
-.buscar input {
-  outline: none;
-  width: 580px;
-  height: 40px;
-  padding: 0 30px;
-  border-top-left-radius: 20px;
-  border-bottom-left-radius: 20px;
-  border: 1px solid #a5a5a5d5;
-}
-
-.buscar button {
-  width: 60px;
-  height: 40px;
-  border: 1px solid #a5a5a5da;
-  border-top-right-radius: 20px;
-  border-bottom-right-radius: 20px;
-  cursor: pointer;
-}
-
-.buscar button:hover {
-  background: #d6d6d6;
-}
-
-.user {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 200px;
-  height: 100%;
-  gap: 25px;
-}
-
-.user svg {
-  cursor: pointer;
-}
-
-.section {
-  display: flex;
-  flex-direction: row;
-  height: 100%;
 }
 
 .menu-esquerdo {
   display: flex;
   flex-direction: column;
-  width: 100%;
+  width: 220px;
   height: 100%;
+  padding-left: 15px;
   overflow-y: hidden;
+  z-index: 9999;
 }
 
 .menu-esquerdo:hover {
@@ -128,7 +89,7 @@ body {
   flex-direction: row;
   text-decoration: none;
   align-items: center;
-  width: 200px;
+  width: 185px;
   padding: 10px;
   color: black;
   gap: 5px;
@@ -139,10 +100,93 @@ body {
   border-radius: 10px;
 }
 
-.menu-section-videos {
+.menu-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: fixed;
+  width: 100%;
+  height: 100px;
+  background-color: white;
+  padding-left: 100px;
+  position: fixed;
+
+}
+
+.buscar {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding-top: 10px;
+  padding-bottom: 30px;
+  padding-left: 100px;
+  width: 100%;
+}
+
+.buscar input {
+  width: 550px;
+  padding: 10px;
+  margin-left: 100px;
+  outline: none;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+  border: 1px solid rgb(216, 216, 216);
+}
+
+.buscar button {
   display: flex;
   align-items: center;
-  height: 50px;
+  justify-content: center;
+  width: 58px;
+  padding: 8px;
+  cursor: pointer;
+  background: #f0f0f0;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+  border: 1px solid rgb(216, 216, 216);
+}
+
+.buscar button:hover {
+  background: #d4d4d4;
+}
+
+.buscar .bi-mic-fill {
+  cursor: pointer;
+  width: 30px;
+  height: 30px;
+  padding: 7px;
+  margin-left: 15px;
+  border-radius: 50%;
+  background: #f0f0f0;
+}
+
+.buscar .bi-mic-fill:hover {
+  background: #d4d4d4;
+}
+
+.usuario {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin-left: 100px;
+  gap: 15px;
+}
+
+.usuario svg {
+  cursor: pointer;
+}
+
+.usuario img {
+  border-radius: 50%;
+}
+
+.menu-section-videos {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin-left: 25px;
 }
 
 .menu-section-videos>ul {
@@ -154,10 +198,13 @@ body {
 
 .menu-section-videos>ul>li>a {
   text-decoration: none;
-  padding: 10px 10px;
+  padding: 7px 10px;
   margin-left: 15px;
+  border-radius: 7px;
+  font-size: 13px;
+  font-weight: bold;
   background: rgba(0, 0, 0, 0.05);
-  border-radius: 10px;
+  font-family: Arial, Helvetica, sans-serif;
   color: black;
 }
 
@@ -168,17 +215,20 @@ body {
 .videos {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
-  margin-top: 50px;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding-left: 200px;
 }
 
 .card-video {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 340px;
-  height: 300px;
+  width: 313px;
+  height: 320px;
   padding: 10px;
+  margin-left: 18px;
   border-radius: 10px;
 }
 
@@ -193,7 +243,8 @@ body {
 .card-texto {
   font-size: 16px;
   margin: 10px 15px;
-  width: 320px;
+  width: 310px;
+  height: 100px;
 }
 
 .card-texto span {
