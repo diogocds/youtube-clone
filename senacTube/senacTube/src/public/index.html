@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <link
+      rel="icon"
+      href="./assets/images/icobgyotube.png"
+      type="image/gif"
+      sizes="16x16"
+    />
+    <script src="./assets/components/menu-videos.js"></script>
+    <script src="./assets/components/menu-esquerdo.js"></script>
+    <title>YouTube-Clone</title>
+  </head>
+
+  <body>
+    <header class="menu">
+      <div class="logo">
+        <svg
+          xmlns="#www.w3.org/2000/svg"
+          fill="currentColor"
+          class="bi bi-list"
+          viewBox="0 0 16 16"
+          style="width: 24px; height: 24px"
+        >
+          <path
+            fill-rule="evenodd"
+            d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5"
+          />
+        </svg>
+        <figure>
+          <a href="/">
+            <img src="./assets/images/logoyoutube.png" alt="logotipo youtube" />
+          </a>
+        </figure>
+        <span>BR</span>
+      </div>
+      <!-- menu esquerdo -->
+      <menu-left></menu-left>
+      <!-- menu esquerdo -->
+    </header>
+    <section class="menu-section">
+      <div class="buscar">
+        <input type="text" placeholder="Procurar" /><button>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="18"
+            height="18"
+            fill="currentColor"
+            class="bi bi-search"
+            viewBox="0 0 16 16"
+          >
+            <path
+              d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"
+            />
+          </svg></button
+        ><svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="20"
+          height="20"
+          fill="currentColor"
+          class="bi bi-mic-fill"
+          viewBox="0 0 16 16"
+        >
+          <path d="M5 3a3 3 0 0 1 6 0v5a3 3 0 0 1-6 0z" />
+          <path
+            d="M3.5 6.5A.5.5 0 0 1 4 7v1a4 4 0 0 0 8 0V7a.5.5 0 0 1 1 0v1a5 5 0 0 1-4.5 4.975V15h3a.5.5 0 0 1 0 1h-7a.5.5 0 0 1 0-1h3v-2.025A5 5 0 0 1 3 8V7a.5.5 0 0 1 .5-.5"
+          />
+        </svg>
+        <div class="usuario">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            height="24"
+            style="width: 24px; height: 24px"
+            viewBox="0 0 24 24"
+            width="24"
+            focusable="false"
+            aria-hidden="true"
+          >
+            <path
+              d="M14 13h-3v3H9v-3H6v-2h3V8h2v3h3v2zm3-7H3v12h14v-6.39l4 1.83V8.56l-4 1.83V6m1-1v3.83L22 7v8l-4-1.83V19H2V5h16z"
+            ></path>
+          </svg>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="currentColor"
+            height="24"
+            viewBox="0 0 24 24"
+            width="24"
+            focusable="false"
+            aria-hidden="true"
+            style="width: 24px; height: 24px"
+          >
+            <path
+              clip-rule="evenodd"
+              d="m13.497 4.898.053.8.694.4C15.596 6.878 16.5 8.334 16.5 10v2.892c0 .997.27 1.975.784 2.83L18.35 17.5H5.649l1.067-1.778c.513-.855.784-1.833.784-2.83V10c0-1.666.904-3.122 2.256-3.902l.694-.4.053-.8c.052-.78.703-1.398 1.497-1.398.794 0 1.445.618 1.497 1.398ZM6 10c0-2.224 1.21-4.165 3.007-5.201C9.11 3.236 10.41 2 12 2c1.59 0 2.89 1.236 2.993 2.799C16.79 5.835 18 7.776 18 10v2.892c0 .725.197 1.436.57 2.058l1.521 2.535c.4.667-.08 1.515-.857 1.515H15c0 .796-.316 1.559-.879 2.121-.562.563-1.325.879-2.121.879s-1.559-.316-2.121-.879C9.316 20.56 9 19.796 9 19H4.766c-.777 0-1.257-.848-.857-1.515L5.43 14.95c.373-.622.57-1.333.57-2.058V10Zm4.5 9c0 .398.158.78.44 1.06.28.282.662.44 1.06.44s.78-.158 1.06-.44c.282-.28.44-.662.44-1.06h-3Z"
+              fill-rule="evenodd"
+            ></path>
+          </svg>
+          <a href="/login">
+            <img
+              id="img"
+              draggable="false"
+              class="style-scope yt-img-shadow"
+              alt="Avatar image"
+              height="32px"
+              width="32px"
+              src="https://yt3.ggpht.com/yti/ANjgQV-tnAqmAd-liuYQtxKAKIJrLSybUd9g1mIwNl14SrI=s88-c-k-c0x00ffffff-no-rj-mo"
+            />
+          </a>
+        </div>
+      </div>
+      <!-- menu video -->
+      <menu-video></menu-video>
+      <!-- menu video -->
+    </section>
+    <main class="section-main">
+      <section class="videos-conteudo"></section>
+    </main>
+    <footer></footer>
+    <script src="assets/js/carregarVideosIndex.js"></script>
+  </body>
+</html>
